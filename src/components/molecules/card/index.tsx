@@ -21,8 +21,15 @@ const Card: React.FC = () => {
         </Component.Capsule>
       </Component.CardTop>
       <Component.CardContent>
-        <Component.CardTitle>Valdispert Mélatonine 1,9 mg </Component.CardTitle>
-        <Component.SubTitle>Votré compatibilité 90/100</Component.SubTitle>
+        <Component.Content>
+          <Component.CardTitle>
+            Valdispert Mélatonine 1,9 mg{' '}
+          </Component.CardTitle>
+          <Component.SubTitle>Votré compatibilité 90/100</Component.SubTitle>
+        </Component.Content>
+        <Component.ProductImage>
+          <Image source={require('../../../assets/images/product.png')} />
+        </Component.ProductImage>
       </Component.CardContent>
     </Component.Container>
   );

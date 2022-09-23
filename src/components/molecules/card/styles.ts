@@ -61,6 +61,7 @@ export const Title = styled.Text`
 `
 export const CardContent = styled.View`
     margin-top: 14px;
+    flex-direction: row;
 `
 
 export const CardTitle = styled.Text`
@@ -77,4 +78,11 @@ export const SubTitle = styled.Text`
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+`
+
+export const Content = styled.View``
+
+export const ProductImage = styled.View`
+    flex-direction: row;
+    margin-top: -28px;
 `
