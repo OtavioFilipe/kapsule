@@ -86,3 +86,34 @@ export const ProductImage = styled.View`
     flex-direction: row;
     margin-top: -28px;
 `
+
+export const StatusCard = styled.View`
+    flex: 1;
+    background-color: #F5F7FE;
+    border-radius: 8px;
+    margin-top: 24px;
+    flex-direction: row;
+`;
+
+export const StatusLeftSide = styled.View`
+    padding-horizontal: 16px;
+    padding-vertical: 17px;
+    border: 3px;
+    flex: 1;
+`;
+
+export const StatusRightSide = styled.View`
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #BDBDBD;
+    flex: 1;
+`;
+
+
+export const TitleCardStatus = styled.Text`
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+`;

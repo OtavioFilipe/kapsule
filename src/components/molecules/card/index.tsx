@@ -1,9 +1,17 @@
 import React from 'react';
 import {Image} from 'react-native';
+import Button from '../../atoms/button';
+import ContentCard from '../content-card';
 
 import * as Component from './styles';
 
-const Card: React.FC = () => {
+interface CardProps {
+  title: string;
+  subTitle: string;
+  image: any;
+}
+
+const Card: React.FC<CardProps> = ({title, image, subTitle}) => {
   return (
     <Component.Container>
       <Component.CardTop>
@@ -22,15 +30,18 @@ const Card: React.FC = () => {
       </Component.CardTop>
       <Component.CardContent>
         <Component.Content>
-          <Component.CardTitle>
-            Valdispert Mélatonine 1,9 mg{' '}
-          </Component.CardTitle>
-          <Component.SubTitle>Votré compatibilité 90/100</Component.SubTitle>
+          <Component.CardTitle>{title}</Component.CardTitle>
+          <Component.SubTitle>{subTitle}</Component.SubTitle>
         </Component.Content>
         <Component.ProductImage>
-          <Image source={require('../../../assets/images/product.png')} />
+          <Image source={image} />
         </Component.ProductImage>
       </Component.CardContent>
+      <ContentCard />
+      <Button
+        text="18€99"
+        icon={require('../../../assets/icons/plusIcon.png')}
+      />
     </Component.Container>
   );
 };
