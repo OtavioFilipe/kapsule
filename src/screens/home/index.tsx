@@ -44,6 +44,7 @@ const HomeScreen: React.FC = () => {
             image={item.image}
           />
         )}
+        showsVerticalScrollIndicator={false}
       />
     </AppTemplate>
   );
