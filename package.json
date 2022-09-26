@@ -12,9 +12,11 @@
   "dependencies": {
     "react": "18.1.0",
     "react-native": "0.70.1",
+    "react-native-circular-gradient-progress": "^1.0.6",
     "react-native-linear-gradient": "^2.6.2",
     "react-native-responsive-screen": "^1.4.2",
     "react-native-skeleton-placeholder": "^5.0.0",
+    "react-native-svg": "^13.2.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

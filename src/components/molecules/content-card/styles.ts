@@ -42,7 +42,8 @@ export const Circle = styled.View`
     width: 44px;
     height: 44px;
     border-radius: 100px;
-    border: 1px ;
+    border: 1px;
+    border-color: #BDBDBD;
     align-items: center;
     justify-content: center;
 `;

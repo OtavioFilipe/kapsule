@@ -14,7 +14,7 @@ export const Container = styled.TouchableOpacity`
     shadow-radius: 3.84;
 
     elevation: 5;
-    shadow-offset: {  width: 10,  height: 10  };
+    shadow-offset: {  width: 10;  height: 10  };
     shadow-color: black;
     shadow-opacity: 1.0;
 `;
@@ -50,6 +50,7 @@ export const Capsule = styled.View`
     flex-direction: row;
     align-items: center;
     padding: 3px;
+    border-radius: 4px;
 `
 
 export const Title = styled.Text`

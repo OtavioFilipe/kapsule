@@ -3,6 +3,8 @@ import {FlatList} from 'react-native';
 import Card from '../../components/molecules/card';
 import AppTemplate from '../../components/template/app-template';
 
+import {CircularProgress} from 'react-native-circular-gradient-progress';
+
 import * as Component from './styles';
 
 const HomeScreen: React.FC = () => {
@@ -46,6 +48,7 @@ const HomeScreen: React.FC = () => {
         )}
         showsVerticalScrollIndicator={false}
       />
+      <CircularProgress color="#F00" size={14} progress={1} />
     </AppTemplate>
   );
 };
