@@ -69,7 +69,7 @@ export const CardTitle = styled.Text`
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 22px;
 `
 
@@ -77,7 +77,7 @@ export const SubTitle = styled.Text`
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
 `
 
@@ -86,6 +86,7 @@ export const Content = styled.View``
 export const ProductImage = styled.View`
     flex-direction: row;
     margin-top: -28px;
+    margin-left: 10px;
 `
 
 export const StatusCard = styled.View`

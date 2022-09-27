@@ -15,13 +15,13 @@ const HomeScreen: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Dipirona',
+      title: 'Valdispert Mélatonine 1,9 mg',
       subTitle: 'Votré compatibilité 90/100',
       image: require('../../assets/images/product.png'),
     },
     {
       id: 3,
-      title: 'Losatarna',
+      title: 'Valdispert Mélatonine 1,9 mg',
       subTitle: 'Votré compatibilité 90/100',
       image: require('../../assets/images/product.png'),
     },
