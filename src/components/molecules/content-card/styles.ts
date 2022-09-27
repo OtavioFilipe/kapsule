@@ -42,8 +42,8 @@ export const Circle = styled.View`
     width: 44px;
     height: 44px;
     border-radius: 100px;
-    border: 1px;
-    border-color: #BDBDBD;
+    border: 1.5px solid #BDBDBD;
     align-items: center;
     justify-content: center;
+    position: absolute;
 `;

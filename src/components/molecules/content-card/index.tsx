@@ -2,6 +2,8 @@ import React from 'react';
 import {Image, View} from 'react-native';
 import Chips from '../../atoms/chips';
 
+import {GradientCircularProgress} from 'react-native-circular-gradient-progress';
+
 import * as Component from './styles';
 
 const ContentCard: React.FC = () => {
@@ -34,6 +36,13 @@ const ContentCard: React.FC = () => {
             <Component.Circle>
               <Image source={row.icon} />
             </Component.Circle>
+            <GradientCircularProgress
+              startColor="#2EFFAF"
+              middleColor="#16D2D9"
+              endColor="#00AAFF"
+              size={45}
+              progress={50}
+            />
           </Component.ContentRowRight>
         </Component.ContentRow>
       ))}
