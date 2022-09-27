@@ -30,3 +30,9 @@ export const RightSide = styled.View`
     padding-right: 16px;
     flex-direction: row;
 `;
+
+export const Circle = styled.View`
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+`

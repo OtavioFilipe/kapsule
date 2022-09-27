@@ -2,6 +2,8 @@ import React from 'react';
 import {Image} from 'react-native';
 import Chips from '../../atoms/chips';
 
+import {GradientCircularProgress} from 'react-native-circular-gradient-progress';
+
 import * as Component from './styles';
 
 const TopBar: React.FC = () => {
@@ -16,6 +18,15 @@ const TopBar: React.FC = () => {
       <Component.RightSide>
         <Chips />
         <Component.Cart style={{marginLeft: 4}}>
+          <Component.Circle>
+            <GradientCircularProgress
+              startColor="#2EFFAF"
+              middleColor="#16D2D9"
+              endColor="#00AAFF"
+              size={45}
+              progress={50}
+            />
+          </Component.Circle>
           <Image source={require('../../../assets/icons/shop-cart.png')} />
         </Component.Cart>
       </Component.RightSide>
