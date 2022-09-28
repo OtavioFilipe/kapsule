@@ -4,14 +4,16 @@ import * as Component from './styles';
 
 interface ButtonProps {
   text: string;
-  icon: any;
+  icon?: any;
+  onPress?: any;
+  bgColor?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({text, icon}) => {
+const Button: React.FC<ButtonProps> = ({text, icon, ...rest}) => {
   return (
-    <Component.Container>
+    <Component.Container {...rest}>
       <Component.Title>{text}</Component.Title>
-      <Component.Icon source={icon} />
+      {icon && <Component.Icon source={icon} />}
     </Component.Container>
   );
 };

@@ -4,7 +4,7 @@ export const Container = styled.TouchableOpacity`
   align-self: flex-end;
   width: 172px;
   height: 28px;
-  background: #21E7C5;
+  background: ${(prop: any) => prop.bgColor || "#21E7C5"};
   border-radius: 30px;
   flex-direction: row;
   justify-content: center;

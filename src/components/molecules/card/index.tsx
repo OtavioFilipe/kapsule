@@ -1,17 +1,25 @@
 import React from 'react';
 import {Image} from 'react-native';
 import Button from '../../atoms/button';
-import ContentCard from '../content-card';
+import ContentCard, {ContentCardProps} from '../content-card';
 
 import * as Component from './styles';
 
-interface CardProps {
+interface CardProps extends ContentCardProps {
   title: string;
   subTitle: string;
   image: any;
+  handleProgress: () => void;
 }
 
-const Card: React.FC<CardProps> = ({title, image, subTitle}) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  image,
+  subTitle,
+  progress,
+  handleProgress,
+  setProgress,
+}) => {
   return (
     <Component.Container>
       <Component.CardTop>
@@ -37,8 +45,9 @@ const Card: React.FC<CardProps> = ({title, image, subTitle}) => {
           <Image source={image} />
         </Component.ProductImage>
       </Component.CardContent>
-      <ContentCard />
+      <ContentCard progress={progress} setProgress={setProgress} />
       <Button
+        onPress={handleProgress}
         text="18€99"
         icon={require('../../../assets/icons/plusIcon.png')}
       />

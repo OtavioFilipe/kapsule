@@ -10,7 +10,6 @@ export const Container = styled.TouchableOpacity`
     padding-horizontal: 17px;
     padding-vertical: 16px;
     
-    shadow-opacity: 0.25;
     shadow-radius: 3.84;
 
     elevation: 5;

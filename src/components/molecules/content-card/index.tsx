@@ -6,7 +6,12 @@ import {GradientCircularProgress} from 'react-native-circular-gradient-progress'
 
 import * as Component from './styles';
 
-const ContentCard: React.FC = () => {
+export interface ContentCardProps {
+  progress?: number;
+  setProgress?(progress: number): void;
+}
+
+const ContentCard: React.FC<ContentCardProps> = ({progress, setProgress}) => {
   const data = [
     {
       id: 1,
@@ -41,7 +46,7 @@ const ContentCard: React.FC = () => {
               middleColor="#16D2D9"
               endColor="#00AAFF"
               size={45}
-              progress={50}
+              progress={progress}
             />
           </Component.ContentRowRight>
         </Component.ContentRow>
