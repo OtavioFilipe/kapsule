@@ -49,7 +49,6 @@ const HomeScreen: React.FC = () => {
 
   return (
     <AppTemplate>
-      <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
       {loading ? (
         <>
           <Component.Title>Best products</Component.Title>
@@ -70,6 +69,10 @@ const HomeScreen: React.FC = () => {
               />
             )}
             showsVerticalScrollIndicator={false}
+          />
+          <Modal
+            modalVisible={modalVisible}
+            setModalVisible={setModalVisible}
           />
         </>
       ) : (
