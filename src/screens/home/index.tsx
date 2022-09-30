@@ -1,12 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, View} from 'react-native';
-import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import Card from '../../components/molecules/card';
+import Skeleton from '../../components/molecules/skeleton';
 import AppTemplate from '../../components/template/app-template';
-
-import Modal from '../../components/molecules/modal';
-
-import * as Component from './styles';
 
 const HomeScreen: React.FC = () => {
   const data = [
@@ -45,12 +39,12 @@ const HomeScreen: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 2000);
+    }, 10000);
   }, []);
 
   return (
     <AppTemplate>
-      {loading ? (
+      {/* {loading ? (
         <>
           <Component.Title>Best products</Component.Title>
           <Component.SubTitle>
@@ -77,33 +71,11 @@ const HomeScreen: React.FC = () => {
           />
         </>
       ) : (
-        <SkeletonPlaceholder>
-          <View style={{flexDirection: 'row', alignItems: 'center', left: 16}}>
-            <View
-              style={{
-                position: 'absolute',
-                width: 104,
-                height: 11,
-                top: 32,
-                backgroundColor: '#545976',
-                borderRadius: 25,
-              }}
-            />
-          </View>
-          <View style={{flexDirection: 'row', alignItems: 'center', left: 16}}>
-            <View
-              style={{
-                position: 'absolute',
-                width: 104,
-                height: 11,
-                top: 62,
-                backgroundColor: '#545976',
-                borderRadius: 25,
-              }}
-            />
-          </View>
-        </SkeletonPlaceholder>
-      )}
+        <View>
+
+        </View>
+      )} */}
+      <Skeleton />
     </AppTemplate>
   );
 };
