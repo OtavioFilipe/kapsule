@@ -37,7 +37,7 @@ const Skeleton: React.FC = () => {
 
   const translateX3 = AnimatedValue.interpolate({
     inputRange: [0, 1],
-    outputRange: [0, 5],
+    outputRange: [0, 45],
   });
 
   return (
@@ -52,8 +52,16 @@ const Skeleton: React.FC = () => {
           backgroundColor: '#545976',
           opacity: 0.3,
           borderRadius: 25,
-        }}
-      />
+        }}>
+        <Animated.View
+          style={{
+            width: '100%',
+            height: '100%',
+            opacity: 0.5,
+            backgroundColor: '#FFF',
+            transform: [{translateX: translateX2}],
+          }}></Animated.View>
+      </View>
       <View
         style={{
           flexDirection: 'row',
@@ -76,8 +84,15 @@ const Skeleton: React.FC = () => {
             borderRadius: 25,
           }}
         />
+        <Animated.View
+          style={{
+            width: '100%',
+            height: '100%',
+            opacity: 0.5,
+            backgroundColor: '#FFF',
+            transform: [{translateX: translateX2}],
+          }}></Animated.View>
       </View>
-
       <View
         style={{
           width: 360,
@@ -100,7 +115,16 @@ const Skeleton: React.FC = () => {
                 marginRight: 6,
                 borderRadius: 3,
                 backgroundColor: '#F5F7FE',
-              }}></View>
+              }}>
+              <Animated.View
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  opacity: 0.5,
+                  backgroundColor: '#FFF',
+                  transform: [{translateX: translateX3}],
+                }}></Animated.View>
+            </View>
           ))}
           <View
             style={{
@@ -109,8 +133,16 @@ const Skeleton: React.FC = () => {
               marginRight: 6,
               borderRadius: 3,
               backgroundColor: '#F5F7FE',
-            }}
-          />
+            }}>
+            <Animated.View
+              style={{
+                width: '100%',
+                height: '100%',
+                opacity: 0.5,
+                backgroundColor: '#FFF',
+                transform: [{translateX: translateX3}],
+              }}></Animated.View>
+          </View>
         </View>
         <View
           style={{
@@ -131,8 +163,16 @@ const Skeleton: React.FC = () => {
                     backgroundColor: '#545976',
                     opacity: 0.3,
                     marginBottom: 10,
-                  }}
-                />
+                  }}>
+                  <Animated.View
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      opacity: 0.5,
+                      backgroundColor: '#FFF',
+                      transform: [{translateX: translateX2}],
+                    }}></Animated.View>
+                </View>
               ))}
             </View>
           </View>
@@ -143,8 +183,16 @@ const Skeleton: React.FC = () => {
                 height: 85,
                 borderRadius: 100,
                 backgroundColor: '#F5F7FE',
-              }}
-            />
+              }}>
+              <Animated.View
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  opacity: 0.5,
+                  backgroundColor: '#FFF',
+                  transform: [{translateX: translateX2}],
+                }}></Animated.View>
+            </View>
           </View>
         </View>
         <View
@@ -175,8 +223,16 @@ const Skeleton: React.FC = () => {
                   backgroundColor: '#545976',
                   opacity: 0.3,
                   borderRadius: 25,
-                }}
-              />
+                }}>
+                <Animated.View
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    opacity: 0.5,
+                    backgroundColor: '#FFF',
+                    transform: [{translateX: translateX2}],
+                  }}></Animated.View>
+              </View>
               <View
                 style={{
                   width: 44,
@@ -185,8 +241,16 @@ const Skeleton: React.FC = () => {
                   borderWidth: 1.5,
                   borderColor: '#BDBDBD',
                   borderRadius: 100,
-                }}
-              />
+                }}>
+                <Animated.View
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    opacity: 0.5,
+                    backgroundColor: '#FFF',
+                    transform: [{translateX: translateX2}],
+                  }}></Animated.View>
+              </View>
             </View>
           ))}
         </View>
@@ -199,8 +263,16 @@ const Skeleton: React.FC = () => {
             alignSelf: 'flex-end',
             marginTop: 10,
             marginRight: 16,
-          }}
-        />
+          }}>
+          <Animated.View
+            style={{
+              width: '100%',
+              height: '100%',
+              opacity: 0.5,
+              backgroundColor: '#FFF',
+              transform: [{translateX: translateX2}],
+            }}></Animated.View>
+        </View>
       </View>
     </>
   );
