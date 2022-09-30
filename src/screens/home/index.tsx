@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from 'react';
+import {FlatList} from 'react-native';
+import Card from '../../components/molecules/card';
+import Modal from '../../components/molecules/modal';
 import Skeleton from '../../components/molecules/skeleton';
 import AppTemplate from '../../components/template/app-template';
+
+import * as Component from './styles';
 
 const HomeScreen: React.FC = () => {
   const data = [
@@ -39,12 +44,12 @@ const HomeScreen: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 10000);
+    }, 2000);
   }, []);
 
   return (
     <AppTemplate>
-      {/* {loading ? (
+      {loading ? (
         <>
           <Component.Title>Best products</Component.Title>
           <Component.SubTitle>
@@ -71,11 +76,8 @@ const HomeScreen: React.FC = () => {
           />
         </>
       ) : (
-        <View>
-
-        </View>
-      )} */}
-      <Skeleton />
+        <Skeleton />
+      )}
     </AppTemplate>
   );
 };
