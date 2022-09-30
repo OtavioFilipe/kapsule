@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react';
 import {FlatList, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import Card from '../../components/molecules/card';
-import Modal from '../../components/molecules/modal';
 import AppTemplate from '../../components/template/app-template';
+
+import Modal from '../../components/molecules/modal';
 
 import * as Component from './styles';
 
@@ -77,14 +78,29 @@ const HomeScreen: React.FC = () => {
         </>
       ) : (
         <SkeletonPlaceholder>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <View style={{width: 60, height: 60, borderRadius: 50}} />
-            <View style={{marginLeft: 20}}>
-              <View style={{width: 120, height: 20, borderRadius: 4}} />
-              <View
-                style={{marginTop: 6, width: 80, height: 20, borderRadius: 4}}
-              />
-            </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', left: 16}}>
+            <View
+              style={{
+                position: 'absolute',
+                width: 104,
+                height: 11,
+                top: 32,
+                backgroundColor: '#545976',
+                borderRadius: 25,
+              }}
+            />
+          </View>
+          <View style={{flexDirection: 'row', alignItems: 'center', left: 16}}>
+            <View
+              style={{
+                position: 'absolute',
+                width: 104,
+                height: 11,
+                top: 62,
+                backgroundColor: '#545976',
+                borderRadius: 25,
+              }}
+            />
           </View>
         </SkeletonPlaceholder>
       )}
