@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {Animated, View} from 'react-native';
+import React, { useEffect } from 'react';
+import { Animated, View } from 'react-native';
 
 // import { Container } from './styles';
 
@@ -107,8 +107,9 @@ const Skeleton: React.FC = () => {
             alignItems: 'center',
             padding: 16,
           }}>
-          {['', ''].map(item => (
+          {['', ''].map((_,index) => (
             <View
+            key={index}
               style={{
                 width: 24,
                 height: 24,
@@ -154,8 +155,8 @@ const Skeleton: React.FC = () => {
           }}>
           <View style={{flex: 1, marginRight: 57}}>
             <View>
-              {['', ''].map(item => (
-                <View
+              {['', ''].map((_,index) => (
+                <View key={index}
                   style={{
                     width: 220,
                     height: 11,
@@ -207,8 +208,9 @@ const Skeleton: React.FC = () => {
             alignSelf: 'center',
             borderRadius: 8,
           }}>
-          {['', ''].map(item => (
-            <View
+          {['', ''].map((_,index) => (
+            <View 
+            key={index}
               style={{
                 flexDirection: 'row',
                 width: '100%',
