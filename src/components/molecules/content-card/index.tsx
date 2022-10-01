@@ -7,33 +7,18 @@ import {GradientCircularProgress} from 'react-native-circular-gradient-progress'
 import * as Component from './styles';
 
 export interface ContentCardProps {
-  progress?: number;
-  setProgress?(progress: number): void;
+  contentCardData: any[];
 }
 
-const ContentCard: React.FC<ContentCardProps> = ({progress, setProgress}) => {
-  const data = [
-    {
-      id: 1,
-      title: 'Health Goals',
-      subTitle: 'Améliorer les performances',
-      icon: require('../../../assets/iconsCard/medal.png'),
-    },
-    {
-      id: 2,
-      title: 'Symptoms',
-      subTitle: 'Mémorie',
-      icon: require('../../../assets/iconsCard/brain.png'),
-    },
-  ];
+const ContentCard: React.FC<ContentCardProps> = ({contentCardData}) => {
   return (
     <Component.Container>
-      {data.map(row => (
+      {contentCardData.map(row => (
         <Component.ContentRow key={row.id}>
           <Component.ContentRowLeft>
             <View style={{flexDirection: 'row'}}>
               <Component.Title>{row.title}</Component.Title>
-              <Chips />
+              <Chips quantity={3} />
             </View>
             <Component.SubTitle>{row.subTitle}</Component.SubTitle>
           </Component.ContentRowLeft>
@@ -46,7 +31,7 @@ const ContentCard: React.FC<ContentCardProps> = ({progress, setProgress}) => {
               middleColor="#16D2D9"
               endColor="#00AAFF"
               size={45}
-              progress={progress}
+              progress={50}
             />
           </Component.ContentRowRight>
         </Component.ContentRow>

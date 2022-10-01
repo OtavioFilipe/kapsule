@@ -1,44 +1,37 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {FlatList} from 'react-native';
 import Card from '../../components/molecules/card';
 import Modal from '../../components/molecules/modal';
 import Skeleton from '../../components/molecules/skeleton';
 import AppTemplate from '../../components/template/app-template';
+import {CartContext} from '../../context/cartProvider';
+import {data} from '../../utils/mock-medications';
 
 import * as Component from './styles';
 
 const HomeScreen: React.FC = () => {
-  const data = [
-    {
-      id: 1,
-      title: 'Valdispert Mélatonine 1,9 mg',
-      subTitle: 'Votré compatibilité 90/100',
-      image: require('../../assets/images/product.png'),
-    },
-    {
-      id: 2,
-      title: 'Valdispert Mélatonine 1,9 mg',
-      subTitle: 'Votré compatibilité 90/100',
-      image: require('../../assets/images/product.png'),
-    },
-    {
-      id: 3,
-      title: 'Valdispert Mélatonine 1,9 mg',
-      subTitle: 'Votré compatibilité 90/100',
-      image: require('../../assets/images/product.png'),
-    },
-  ];
   const [modalVisible, setModalVisible] = useState(false);
 
   const [loading, setLoading] = useState(false);
 
-  const [progress, setprogress] = useState(25);
+  const {
+    count,
+    handleUpdateCount,
+    handleUpdateProgress,
+    progress,
+    setCount,
+    setProgress,
+  } = useContext(CartContext);
 
   function handleProgress() {
-    setprogress(progress + 25);
+    if (count >= 4) {
+      return;
+    }
     if (progress >= 100) {
       setModalVisible(true);
     }
+    handleUpdateCount();
+    handleUpdateProgress();
   }
 
   useEffect(() => {
@@ -64,8 +57,8 @@ const HomeScreen: React.FC = () => {
                 title={item.title}
                 subTitle={item.subTitle}
                 image={item.image}
-                progress={progress}
                 handleProgress={handleProgress}
+                contentCardData={item.contentCardData}
               />
             )}
             showsVerticalScrollIndicator={false}

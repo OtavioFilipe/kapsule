@@ -16,9 +16,8 @@ const Card: React.FC<CardProps> = ({
   title,
   image,
   subTitle,
-  progress,
   handleProgress,
-  setProgress,
+  contentCardData,
 }) => {
   return (
     <Component.Container>
@@ -45,7 +44,7 @@ const Card: React.FC<CardProps> = ({
           <Image source={image} />
         </Component.ProductImage>
       </Component.CardContent>
-      <ContentCard progress={progress} setProgress={setProgress} />
+      <ContentCard contentCardData={contentCardData} />
       <Button
         onPress={handleProgress}
         text="18€99"
